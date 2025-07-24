@@ -16,7 +16,7 @@ form.addEventListener("submit", event => {
 
   // console.log(formData.get("Number")); // 擷取單個input中的name屬性的值
   
-  fetch("http://localhost:3000", {
+  fetch("https://form-backend-biue.onrender.com", {
     method : "POST",
     headers : {
       "Content-Type": "application/json"// 向伺服器表明是 json 格式

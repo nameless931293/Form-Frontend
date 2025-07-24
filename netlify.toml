@@ -1,0 +1,5 @@
+[[redirects]]
+
+from = "/*"
+to =  "/form.html"
+status = 200

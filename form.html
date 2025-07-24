@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form practice</title>
+    <link rel="stylesheet" href="./form.css">
+    <script src="./sumbit.js" defer></script>
+</head>
+<body>
+    <h3>This is a practice of the form</h3>
+    <div class="left">
+        <div class="motivation">
+            <h4>Description</h4>
+            <p> 
+                I've recently been learning how forms work on websites—how they are submitted to the backend, viewed, and used. 
+                I’d like your help understanding what the backend would see when multiple people submit the form.
+            </p>
+            <p>
+                By the way, only the <strong>age field</strong> is required — everything else is optional. <strong>Just enter any number for age</strong>  and you're good to go.
+                Lastly, and most importantly, I won’t receive your real name or email address, so there’s no need to worry.
+            </p>
+        </div>
+    </div>
+    
+    <div class="right">
+        <form id="form" method="POST"> 
+            <!-- Instead of using "action" to send form, using js fetch() would not refresh the page, therefore giving user a better experience -->
+            <h4>Form starts from here</h4>
+            <div class="input">
+                <label for="name">Enter your name: </label>
+                <input type="text" name="Name" id="name" required placeholder="Enter a name" autocomplete="name">            
+            </div>
+            <br>
+            <div class="input">
+                <label for="age">Enter your age: </label>
+                <input type="number" name="Number" id="age" max="100" min="1" required placeholder="Enter a number">         
+            </div>
+            <br>
+            <div class="input">
+                <label for="advice">Advice how this form could improve: </label>
+                <br>
+                <textarea name="Advice" id="advice" placeholder="Enter anything you like to say"></textarea>
+            </div>
+            <div class="input">
+                <p>how do you see this form: </p>
+                <input type="radio" name="Place" id="place1" value="Line group">Line group  
+                <input type="radio" name="Place" id="place2" value="IG post">IG post
+                <input type="radio" name="Place" id="place3" value="github post">github post
+                <input type="radio" name="Place" id="place4" value="Discord message">Discord message
+                <input type="radio" name="Place" id="place5" value="Not interested to let you know">Not interested to let you know
+            </div>
+
+            <br>
+            <button type="submit" class="sumbit">Press to sumbit <img src="/submit.png" alt=""></button>
+        </form>
+    </div>
+
+</body>
+</html>

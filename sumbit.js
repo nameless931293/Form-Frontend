@@ -3,7 +3,7 @@ const form = document.getElementById('form')
 
 
 form.addEventListener("submit", event => {
-  event.preventDefault(); // 阻止傳統送出
+  //  event.preventDefault(); // 阻止傳統送出
   const formData = new FormData(form);// 自動抓 form 裡所有 name 的值
   // for(const [key, value] of formData.entries()){
   //    console.log(key,": " + value); //取的所有name 和其對應 value

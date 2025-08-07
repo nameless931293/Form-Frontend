@@ -15,7 +15,9 @@ form.addEventListener("submit", event => {
   const formdataObj = Object.fromEntries(formData);
 
   // console.log(formData.get("Number")); // 擷取單個input中的name屬性的值
-  
+  /*  https://form-backend-biue.onrender.com 
+      http://localhost:3000
+  */
   fetch("https://form-backend-biue.onrender.com", {
     method : "POST",
     headers : {
@@ -25,6 +27,12 @@ form.addEventListener("submit", event => {
   })// 把表單資料送到後端
   .then(res => res.json())
   .then(data => {
+    if(data.success){
+      alert("表單送出成功");
+    }
+    else{
+      alert("表單送出失敗")
+    }
     console.log("成功送出！伺服器回傳：", data);
   })
   .catch(error => {
